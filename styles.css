@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::after, *::before {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Inter Regular";
+    src: url("./fonts/Inter_18pt-Regular.woff2") format("woff2");
+    src: url("./fonts/Inter_18pt-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Inter Thin";
+    src: url("./fonts/Inter_18pt-Thin.woff2") format("woff2");
+    src: url("./fonts/Inter_18pt-Thin.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Inter Medium";
+    src: url("./fonts/Inter_18pt-Medium.woff2") format("woff2");
+    src: url("./fonts/Inter_18pt-Medium.woff") format("woff");
+}
+
+:root {
+    --text-color: #fafafa;
+    --primary-color: #16222A;
+    --secondary-color: #3A6073;
+}
+
+body {
+    background: #16222A; 
+    background: -webkit-linear-gradient(to bottom, #16222A, #3A6073 );
+    background: linear-gradient(to bottom, #16222A, #3A6073);
+    min-height: 100vh;
+    color: var(--text-color);
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    font-family: "Inter Regular";
+    padding-block: 1.5em;
+}
+
+.header svg {
+    fill: var(--text-color);
+    width: 40px;
+    height: 40px;
+}
+
+.header h1 {
+    font-size: 1.6rem;
+}
+
+.border-line {
+    width: 90%;
+    margin: 0 auto;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Main container styling */
+main {
+    font-family: "Inter Regular";
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    padding: 0 1em;
+}
+
+main > div:not(:first-of-type){
+    background-color: var(--text-color);
+    color: var(--primary-color);
+    width: 100%;
+    padding: 0.5em 1em;
+    border-radius: 12px;
+}
+
+main > div {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+main h2 {
+    font-size: 1.3rem;
+    font-family: "Inter Thin";
+}
+
+/* Search field Styling */
+.search-field-section {
+    background-color: rgba(255, 255, 255, 0.09);
+    padding: 1em;
+    margin-top: 1em;
+    border-radius: 12px;
+    width: 100%;
+}
+
+.search-field-section .search {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    justify-content: space-between;
+}
+
+.search-field-section .search .search-field {
+    border: none;
+    outline: none;
+    padding: 0.6em 0.5em 0.6em 0.9em;
+    font-size: 1.4rem;
+    border-radius: 20px;
+    width: 100%;
+    font-family: "Inter Regular";
+}
+
+.search-field-caption {
+    font-size: 1rem;
+    margin-left: 1em;
+    margin-top: 0.2em;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.search-field-section div .search-logo {
+    fill: var(--primary-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 0.7em;
+    background-color: var(--text-color);
+}
+
+/* Word, phonetic, audio section styling */
+.word-phonetic-audio-section {
+    display: flex;
+    align-items: center;
+    gap: .4em;
+    font-family: "Inter Medium";
+}
+
+.word-phonetic-audio-section .word {
+    font-size: 1.7rem;
+}
+
+.word-phonetic-audio-section .phonetic {
+    color: rgba(0, 0, 0, 0.7);
+    font-family: "Inter Regular";
+    font-size: 1rem;
+    border: 1px solid var(--secondary-color);
+    padding: 0.5em 0.7em;
+    border-radius: 20px;
+}
+
+/* word Meaning, example, synonyms section */
+div.meaning-example-synonyms-section {
+    font-family: "Inter Medium";
+    font-size: 1.2rem;
+    margin-bottom: 2em;
+}
+
+span.part-of-speech {
+    opacity: 0.8;
+    font-size: 1.4rem;
+    display: inline-block;
+    margin-top: 0.7em;
+}
+
+ol.definitions-list {
+    font-size: 1.3rem;
+    margin-top: 1em;
+    margin-bottom: 0.3em;
+    list-style-position: inside;
+}   
+
+ol.definitions-list h3, .synonyms h4 {
+    margin-bottom: 0.6em;   
+    font-size: 1.3rem;
+}
+
+p.example {
+    font-style: italic;
+    font-size: 1.2rem;
+}
+
+div.synonyms{
+    margin-top: 1.7em;
+}
+
+.synonyms .synonym {
+    color: var(--secondary-color);
+    background-color: #3A607330;
+    padding: 0.5em 0.7em;
+    border-radius: 1em;
+    display: inline-block;
+    margin-bottom: .5em;
+}

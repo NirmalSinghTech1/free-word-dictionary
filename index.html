@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Free Word Dictionary</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header class="header">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M160-391h45l23-66h104l24 66h44l-97-258h-46l-97 258Zm81-103 38-107h2l38 107h-78Zm319-70v-68q33-14 67.5-21t72.5-7q26 0 51 4t49 10v64q-24-9-48.5-13.5T700-600q-38 0-73 9.5T560-564Zm0 220v-68q33-14 67.5-21t72.5-7q26 0 51 4t49 10v64q-24-9-48.5-13.5T700-380q-38 0-73 9t-67 27Zm0-110v-68q33-14 67.5-21t72.5-7q26 0 51 4t49 10v64q-24-9-48.5-13.5T700-490q-38 0-73 9.5T560-454ZM260-320q47 0 91.5 10.5T440-278v-394q-41-24-87-36t-93-12q-36 0-71.5 7T120-692v396q35-12 69.5-18t70.5-6Zm260 42q44-21 88.5-31.5T700-320q36 0 70.5 6t69.5 18v-396q-33-14-68.5-21t-71.5-7q-47 0-93 12t-87 36v394Zm-40 118q-48-38-104-59t-116-21q-42 0-82.5 11T100-198q-21 11-40.5-1T40-234v-482q0-11 5.5-21T62-752q46-24 96-36t102-12q58 0 113.5 15T480-740q51-30 106.5-45T700-800q52 0 102 12t96 36q11 5 16.5 15t5.5 21v482q0 23-19.5 35t-40.5 1q-37-20-77.5-31T700-240q-60 0-116 21t-104 59ZM280-499Z"/></svg>
+            </div>
+            <h1>FreeWord Dictionary</h1>
+        </header>
+        <hr class="border-line">
+        <main>
+            <h2>What word do you want to look up?</h2>
+
+            <!-- Search field section -->
+            <div class="search-field-section">  
+                <div class="search">
+                    <input type="search" class="search-field" placeholder="Enter your word...">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" class="search-logo">
+                        <g>
+                            <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
+                        </g>
+                    </svg>
+                </div>
+                <p class="search-field-caption">i.e.: environment, tree, person,...</p>
+            </div>
+
+            <!-- Word, word pronounce and phonetic section -->
+            <div class="word-phonetic-audio-section">
+                <video loop autoplay width="45" height="45">
+                    <source src="./listen_animation.webm" type="video/webm">
+                </video>
+                <span class="word">food</span>
+                <audio src="" class="audio"></audio>
+                <span class="phonetic">alsjdklf</span>
+            </div>
+
+            <!-- Word meaning, definition, example and synonyms section-->
+            <div class="meaning-example-synonyms-section">
+                <span class="part-of-speech">noun</span>
+                <ol class="definitions-list">
+                    <h3>Definitions: </h3>
+                    <li>
+                        Any nutritions substance that people or animals eat or drink or that plants absorb in order to maintain life and growth. 
+                    </li>
+                </ol>
+                <p class="example">example: "we need food and water"</p>
+                <div class="synonyms">
+                    <h4>Synonyms:</h4>
+                    <span class="synonym">substance</span>
+                    <span class="synonym">nutritions</span>
+                    <span class="synonym">person</span>
+                    <span class="synonym">nutritions</span>
+                    <span class="synonym">nutritions</span>
+                    <span class="synonym">nutritions</span>
+                    <span class="synonym">nutritions</span>
+                    <span class="synonym">nutritions</span>
+                    <span class="synonym">individual</span>
+                </div>
+            </div>  
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
