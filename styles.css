@@ -39,6 +39,11 @@ body {
     background: linear-gradient(to bottom, #16222A, #3A6073);
     min-height: 100vh;
     color: var(--text-color);
+    overflow-y: auto;
+}
+
+button {
+    cursor: pointer;
 }
 
 /* Header Styling */
@@ -53,8 +58,8 @@ body {
 
 .header svg {
     fill: var(--text-color);
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
 }
 
 .header h1 {
@@ -77,13 +82,14 @@ main {
     align-items: center;
     gap: 1em;
     padding: 0 1em;
+    position: relative;
 }
 
 main > div:not(:first-of-type){
     background-color: var(--text-color);
     color: var(--primary-color);
     width: 100%;
-    padding: 0.5em 1em;
+    padding: 0.8em 1em;
     border-radius: 12px;
 }
 
@@ -92,7 +98,7 @@ main > div {
 }
 
 main h2 {
-    font-size: 1.3rem;
+    font-size: 1.7rem;
     font-family: "Inter Thin";
 }
 
@@ -116,10 +122,15 @@ main h2 {
     border: none;
     outline: none;
     padding: 0.6em 0.5em 0.6em 0.9em;
+    color: rgba(0, 0, 0, 0.6);
     font-size: 1.4rem;
     border-radius: 20px;
     width: 100%;
-    font-family: "Inter Regular";
+    font-family: "Inter Medium";
+}
+
+.search .search-field:active, .search-field:focus {
+    box-shadow: 0 0 15px violet;
 }
 
 .search-field-caption {
@@ -129,13 +140,23 @@ main h2 {
     color: rgba(255, 255, 255, 0.6);
 }
 
-.search-field-section div .search-logo {
-    fill: var(--primary-color);
-    width: 50px;
-    height: 50px;
+.search-field-section .search button {
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
     padding: 0.7em;
     background-color: var(--text-color);
+    outline: none;
+    border: none;
+    transition: scale 1s ease;
+}
+
+.search button:active {
+    scale: 0.7;
+}
+
+.search-field-section div .search-logo {
+    fill: var(--primary-color);
 }
 
 /* Word, phonetic, audio section styling */
@@ -144,6 +165,14 @@ main h2 {
     align-items: center;
     gap: .4em;
     font-family: "Inter Medium";
+    transition: opacity 1s ease;
+    opacity: 0;
+}
+
+.listen-btn {
+    background: none;
+    border: none;
+    outline: none;
 }
 
 .word-phonetic-audio-section .word {
@@ -164,6 +193,8 @@ div.meaning-example-synonyms-section {
     font-family: "Inter Medium";
     font-size: 1.2rem;
     margin-bottom: 2em;
+    transition: opacity 1s ease;
+    opacity: 0;
 }
 
 span.part-of-speech {
@@ -180,8 +211,14 @@ ol.definitions-list {
     list-style-position: inside;
 }   
 
-ol.definitions-list h3, .synonyms h4 {
-    margin-bottom: 0.6em;   
+.definitions-list li {
+    margin-bottom: 1em;
+}
+
+.meaning-example-synonyms-section h3, 
+.meaning-example-synonyms-section h4 {
+    margin-bottom: 0.4em;   
+    margin-top: 1em;
     font-size: 1.3rem;
 }
 
@@ -190,8 +227,8 @@ p.example {
     font-size: 1.2rem;
 }
 
-div.synonyms{
-    margin-top: 1.7em;
+.synonyms .no-synonym {
+    color: gray;
 }
 
 .synonyms .synonym {
@@ -201,4 +238,37 @@ div.synonyms{
     border-radius: 1em;
     display: inline-block;
     margin-bottom: .5em;
+    margin-right: .5em;
+}
+
+/* Error Message Styling */
+.error-message {
+    display: none;
+    position: absolute;
+    opacity: 0.5;
+    left: 50%;
+    top: 360px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%;
+}
+
+.error-message svg {
+    margin-bottom: 2em;
+}
+
+.error-message p {
+    font-family: 'Inter Regular';
+    color: gainsboro;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+/* Media query */
+@media (min-width: 1200px) {
+    main {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
