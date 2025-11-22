@@ -264,11 +264,69 @@ p.example {
     line-height: 1.5;
 }
 
-/* Media query */
+/* Media queries */
 @media (min-width: 1200px) {
     main {
         width: 80%;
         margin-left: auto;
         margin-right: auto;
+    }
+}
+
+@media (max-width: 470px) {
+    main > h2 {
+        font-size: 1rem;
+    }
+
+    .search-field-section .search .search-field {
+        font-size: 1rem;
+    }
+
+    .search-field-section .search button {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        padding: 0.7em;
+        background-color: var(--text-color);
+        outline: none;
+        border: none;
+        transition: scale 1s ease;
+    }
+
+    .search-button svg{
+        width: 24px;
+        height: 24px;
+    }
+
+    .listen-btn video {
+        width: 28px;
+        height: 28px;
+    }
+
+    .word-phonetic-audio-section .word {
+        font-size: 1.3rem;
+    }
+
+    .meaning-example-synonyms-section .part-of-speech {
+        font-size: 1rem;
+    }
+
+    .meaning-example-synonyms-section h3, 
+    .meaning-example-synonyms-section h4 {
+        font-size: 1rem;
+    }
+
+    ol.definitions-list {
+        font-size: 1.1rem;
+        font-family: "Inter Regular";
+    }  
+
+    .meaning-example-synonyms-section .example {
+        font-family: "Inter Regular";
+        font-size: 1.1rem;
+    }
+
+    .synonyms .synonym {
+        font-size: 1rem;
     }
 }
